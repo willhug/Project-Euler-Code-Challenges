@@ -1,0 +1,16 @@
+import rec
+
+def createTriangle():
+    triangle = []
+    file = None
+    try:
+        file = open("triangle.txt", "r")
+        
+        while (file.readable()):
+            triangle.append(file.readline().split(" "))
+    except IOError, e:
+        print "ERROR"
+    if file: file.close()
+
+print createTriangle()
+        
